@@ -6106,11 +6106,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\1\\Desktop\\תכנות\\Project-.NET\\BL\\BL.csproj",
+      "projectUniqueName": "C:\\Users\\1\\Documents\\תכנות\\project- .NetCore\\.NetProgect\\BL\\BL.csproj",
       "projectName": "BL",
-      "projectPath": "C:\\Users\\1\\Desktop\\תכנות\\Project-.NET\\BL\\BL.csproj",
+      "projectPath": "C:\\Users\\1\\Documents\\תכנות\\project- .NetCore\\.NetProgect\\BL\\BL.csproj",
       "packagesPath": "C:\\Users\\1\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\1\\Desktop\\תכנות\\Project-.NET\\BL\\obj\\",
+      "outputPath": "C:\\Users\\1\\Documents\\תכנות\\project- .NetCore\\.NetProgect\\BL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -6130,8 +6130,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\1\\Desktop\\תכנות\\Project-.NET\\DAL\\DAL.csproj": {
-              "projectPath": "C:\\Users\\1\\Desktop\\תכנות\\Project-.NET\\DAL\\DAL.csproj"
+            "C:\\Users\\1\\Documents\\תכנות\\project- .NetCore\\.NetProgect\\DAL\\DAL.csproj": {
+              "projectPath": "C:\\Users\\1\\Documents\\תכנות\\project- .NetCore\\.NetProgect\\DAL\\DAL.csproj"
             }
           }
         }
@@ -6173,12 +6173,18 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[6.0.21, 6.0.21]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.303\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.316\\RuntimeIdentifierGraph.json"
       }
     }
   }

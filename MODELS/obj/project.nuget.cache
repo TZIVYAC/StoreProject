@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "HnwZ639lT22IG6elog/O6NkJe1/WU+AVPGCPUaJcJpv/Dl7Ojg5K1ty+wN04cqCgd2644nsMvr2Oc69psq91VA==",
+  "dgSpecHash": "TuoG7asTQnng7uhaAllu1nqe2+V6Aceb61D6ymaVQ4KzWFQaZvuf+I5qEXxhBpxM2XCcCK2DN7rq2/DJcXqoxA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\1\\Desktop\\תכנות\\Project-.NET\\MODELS\\MODELS.csproj",
+  "projectFilePath": "C:\\Users\\1\\Documents\\תכנות\\project- .NetCore\\.NetProgect\\MODELS\\MODELS.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\1\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
@@ -107,7 +107,8 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.threading.timer\\4.0.1\\system.threading.timer.4.0.1.nupkg.sha512",
     "C:\\Users\\1\\.nuget\\packages\\system.windows.extensions\\4.7.0\\system.windows.extensions.4.7.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.xml.readerwriter\\4.0.11\\system.xml.readerwriter.4.0.11.nupkg.sha512",
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.xml.xdocument\\4.0.11\\system.xml.xdocument.4.0.11.nupkg.sha512"
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.xml.xdocument\\4.0.11\\system.xml.xdocument.4.0.11.nupkg.sha512",
+    "C:\\Users\\1\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.21\\microsoft.windowsdesktop.app.ref.6.0.21.nupkg.sha512"
   ],
   "logs": []
 }

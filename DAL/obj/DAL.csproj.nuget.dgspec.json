@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\1\\Desktop\\תכנות\\Project-.NET\\DAL\\DAL.csproj": {}
+    "C:\\Users\\1\\Documents\\תכנות\\project- .NetCore\\.NetProgect\\DAL\\DAL.csproj": {}
   },
   "projects": {
-    "C:\\Users\\1\\Desktop\\תכנות\\Project-.NET\\DAL\\DAL.csproj": {
+    "C:\\Users\\1\\Documents\\תכנות\\project- .NetCore\\.NetProgect\\DAL\\DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\1\\Desktop\\תכנות\\Project-.NET\\DAL\\DAL.csproj",
+        "projectUniqueName": "C:\\Users\\1\\Documents\\תכנות\\project- .NetCore\\.NetProgect\\DAL\\DAL.csproj",
         "projectName": "DAL",
-        "projectPath": "C:\\Users\\1\\Desktop\\תכנות\\Project-.NET\\DAL\\DAL.csproj",
+        "projectPath": "C:\\Users\\1\\Documents\\תכנות\\project- .NetCore\\.NetProgect\\DAL\\DAL.csproj",
         "packagesPath": "C:\\Users\\1\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\1\\Desktop\\תכנות\\Project-.NET\\DAL\\obj\\",
+        "outputPath": "C:\\Users\\1\\Documents\\תכנות\\project- .NetCore\\.NetProgect\\DAL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -31,8 +31,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\1\\Desktop\\תכנות\\Project-.NET\\MODELS\\MODELS.csproj": {
-                "projectPath": "C:\\Users\\1\\Desktop\\תכנות\\Project-.NET\\MODELS\\MODELS.csproj"
+              "C:\\Users\\1\\Documents\\תכנות\\project- .NetCore\\.NetProgect\\MODELS\\MODELS.csproj": {
+                "projectPath": "C:\\Users\\1\\Documents\\תכנות\\project- .NetCore\\.NetProgect\\MODELS\\MODELS.csproj"
               }
             }
           }
@@ -78,23 +78,29 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.21, 6.0.21]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.303\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.316\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\1\\Desktop\\תכנות\\Project-.NET\\MODELS\\MODELS.csproj": {
+    "C:\\Users\\1\\Documents\\תכנות\\project- .NetCore\\.NetProgect\\MODELS\\MODELS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\1\\Desktop\\תכנות\\Project-.NET\\MODELS\\MODELS.csproj",
+        "projectUniqueName": "C:\\Users\\1\\Documents\\תכנות\\project- .NetCore\\.NetProgect\\MODELS\\MODELS.csproj",
         "projectName": "MODELS",
-        "projectPath": "C:\\Users\\1\\Desktop\\תכנות\\Project-.NET\\MODELS\\MODELS.csproj",
+        "projectPath": "C:\\Users\\1\\Documents\\תכנות\\project- .NetCore\\.NetProgect\\MODELS\\MODELS.csproj",
         "packagesPath": "C:\\Users\\1\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\1\\Desktop\\תכנות\\Project-.NET\\MODELS\\obj\\",
+        "outputPath": "C:\\Users\\1\\Documents\\תכנות\\project- .NetCore\\.NetProgect\\MODELS\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -161,12 +167,18 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.21, 6.0.21]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.303\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.316\\RuntimeIdentifierGraph.json"
         }
       }
     }

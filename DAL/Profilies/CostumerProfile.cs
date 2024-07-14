@@ -9,12 +9,12 @@ using System.Threading.Tasks;
 
 namespace DAL.Profilies
 {
-    public class UserProfile: Profile
+    public class CostumerProfile: Profile
     {
-        public UserProfile()
+        public CostumerProfile()
         {
-            CreateMap<User, UserDto>();
-            CreateMap<UserDto, User>();
+            CreateMap<Costumer, CostumerDto>();
+            CreateMap<CostumerDto, Costumer>();
         }
     }
 }

@@ -6022,11 +6022,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\1\\Desktop\\תכנות\\Project-.NET\\MODELS\\MODELS.csproj",
+      "projectUniqueName": "C:\\Users\\1\\Documents\\תכנות\\project- .NetCore\\.NetProgect\\MODELS\\MODELS.csproj",
       "projectName": "MODELS",
-      "projectPath": "C:\\Users\\1\\Desktop\\תכנות\\Project-.NET\\MODELS\\MODELS.csproj",
+      "projectPath": "C:\\Users\\1\\Documents\\תכנות\\project- .NetCore\\.NetProgect\\MODELS\\MODELS.csproj",
       "packagesPath": "C:\\Users\\1\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\1\\Desktop\\תכנות\\Project-.NET\\MODELS\\obj\\",
+      "outputPath": "C:\\Users\\1\\Documents\\תכנות\\project- .NetCore\\.NetProgect\\MODELS\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -6093,12 +6093,18 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[6.0.21, 6.0.21]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.303\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.316\\RuntimeIdentifierGraph.json"
       }
     }
   }

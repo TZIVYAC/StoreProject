@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "HoQ/g2/UFSHUkkOyYaa4y+UjCk8IKdEhybpjoo7t8w7dkhQbUBFznhEJcAgMTUG7zY+prwj2fdF/tdPpKKvC8A==",
+  "dgSpecHash": "U4c259C/9KcdVtmDIQVBm63GuCDMCfWnYyvROPjDck/8Kxl/JJnRLCjuROTkF/40DDAojlrzA4cwzYWqCrK6BA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\1\\Desktop\\תכנות\\Project-.NET\\BL\\BL.csproj",
+  "projectFilePath": "C:\\Users\\1\\Documents\\תכנות\\project- .NetCore\\.NetProgect\\BL\\BL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\1\\.nuget\\packages\\automapper\\10.0.0\\automapper.10.0.0.nupkg.sha512",
     "C:\\Users\\1\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
@@ -108,7 +108,8 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.threading.timer\\4.0.1\\system.threading.timer.4.0.1.nupkg.sha512",
     "C:\\Users\\1\\.nuget\\packages\\system.windows.extensions\\4.7.0\\system.windows.extensions.4.7.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.xml.readerwriter\\4.0.11\\system.xml.readerwriter.4.0.11.nupkg.sha512",
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.xml.xdocument\\4.0.11\\system.xml.xdocument.4.0.11.nupkg.sha512"
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.xml.xdocument\\4.0.11\\system.xml.xdocument.4.0.11.nupkg.sha512",
+    "C:\\Users\\1\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.21\\microsoft.windowsdesktop.app.ref.6.0.21.nupkg.sha512"
   ],
   "logs": []
 }

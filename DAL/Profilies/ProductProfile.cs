@@ -11,12 +11,12 @@ using DAL.DTO;
 using Project;
 namespace DAL.Profilies
 {
-    public class DonationProfile : Profile
+    public class ProductProfile : Profile
     {
-        public DonationProfile()
+        public ProductProfile()
         {
-            CreateMap<Donation, DonationDto>();
-            CreateMap<DonationDto, Donation>();
+            CreateMap<Product, ProductDto>();
+            CreateMap<ProductDto, Product>();
         }
     }
 }

@@ -10,14 +10,14 @@ namespace MODELS.Models
 
         public DBContext(DbContextOptions<DBContext> options) : base(options) { }
 
-        public DbSet<User> Users { get; set; }
-        public DbSet<Donation> Donations { get; set; }
+        public DbSet<Costumer> Costumer { get; set; }
+        public DbSet<Product> Product { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Server=DESKTOP-L1QQEC3\\SQLEXPRESS;Database=SecondDB;Integrated Security=True;",
+                optionsBuilder.UseSqlServer("Server=DESKTOP-L1QQEC3\\SQLEXPRESS;Database=ShopDB;Trusted_Connection=True;MultipleActiveResultSets=True",
                     b => b.MigrationsAssembly("MODELS"));
             }
         }

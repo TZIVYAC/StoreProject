@@ -32,8 +32,8 @@ namespace Project
                 var config = new MapperConfiguration(cfg =>
                 {
                     // הוספת פרופילים כאן
-                    cfg.AddProfile<UserProfile>();
-                    cfg.AddProfile<DonationProfile>();
+                    cfg.AddProfile<CostumerProfile>();
+                    cfg.AddProfile<ProductProfile>();
                 });
                 return config.CreateMapper();
             });
@@ -44,13 +44,13 @@ namespace Project
                 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultDataBase")));
 
             // הוספת UserData למיכל ההזרקות
-            builder.Services.AddScoped<UserData>();
-            builder.Services.AddScoped<DonationData>();
+            builder.Services.AddScoped<ProductData>();
+            builder.Services.AddScoped<CostumerData>();
 
 
             // הוספת IUserService עם ההטמעה שלו UserService
-            builder.Services.AddScoped<IUserService, UserService>();
-            builder.Services.AddScoped<IDonationService, DonationService>();
+            builder.Services.AddScoped<ICostumerService, CostumerService>();
+            builder.Services.AddScoped<IProductService, ProductService>();
 
 
             var app = builder.Build();

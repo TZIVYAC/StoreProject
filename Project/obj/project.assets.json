@@ -6322,11 +6322,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\1\\Desktop\\תכנות\\Project-.NET\\Project\\Project.csproj",
+      "projectUniqueName": "C:\\Users\\1\\Documents\\תכנות\\project- .NetCore\\.NetProgect\\Project\\Project.csproj",
       "projectName": "Project",
-      "projectPath": "C:\\Users\\1\\Desktop\\תכנות\\Project-.NET\\Project\\Project.csproj",
+      "projectPath": "C:\\Users\\1\\Documents\\תכנות\\project- .NetCore\\.NetProgect\\Project\\Project.csproj",
       "packagesPath": "C:\\Users\\1\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\1\\Desktop\\תכנות\\Project-.NET\\Project\\obj\\",
+      "outputPath": "C:\\Users\\1\\Documents\\תכנות\\project- .NetCore\\.NetProgect\\Project\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -6346,8 +6346,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\1\\Desktop\\תכנות\\Project-.NET\\BL\\BL.csproj": {
-              "projectPath": "C:\\Users\\1\\Desktop\\תכנות\\Project-.NET\\BL\\BL.csproj"
+            "C:\\Users\\1\\Documents\\תכנות\\project- .NetCore\\.NetProgect\\BL\\BL.csproj": {
+              "projectPath": "C:\\Users\\1\\Documents\\תכנות\\project- .NetCore\\.NetProgect\\BL\\BL.csproj"
             }
           }
         }
@@ -6393,6 +6393,16 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[6.0.21, 6.0.21]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[6.0.21, 6.0.21]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -6401,7 +6411,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.303\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.316\\RuntimeIdentifierGraph.json"
       }
     }
   }
