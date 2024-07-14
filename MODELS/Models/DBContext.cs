@@ -17,7 +17,7 @@ namespace MODELS.Models
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Server=RACHEL\\SQLEXPRESS;Database=SecondDB;Integrated Security=True;",
+                optionsBuilder.UseSqlServer("Server=DESKTOP-L1QQEC3\\SQLEXPRESS;Database=SecondDB;Integrated Security=True;",
                     b => b.MigrationsAssembly("MODELS"));
             }
         }
