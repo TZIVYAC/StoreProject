@@ -21,7 +21,7 @@ namespace BL.Services
         {
             return await _costumerData.GetAllCostumers();
         }
-        public async Task<Costumer> GetCostumerById(long id)
+        public async Task<Costumer> GetCostumerById(int id)
         {
             return await _costumerData.GetCostumerById(id);
         }
@@ -29,13 +29,5 @@ namespace BL.Services
         {
             return await _costumerData.AddCostumer(costumer);
         }
-        //public async Task<bool> AddHoursDonation(int hours, long id)
-        //{
-        //    return await _userData.AddHoursDonation(hours,id);
-        //}
-        //public async Task<bool> RemoveHoursAvailable(int hours, long id)
-        //{
-        //    return await _userData.RemoveHoursAvailable(hours,id);
-        //}
     }
 }

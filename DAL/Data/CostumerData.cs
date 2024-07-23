@@ -27,7 +27,7 @@ namespace DAL.Data
             return costumers;
         }
 
-        public async Task<Costumer> GetCostumerById(long id)
+        public async Task<Costumer> GetCostumerById(int id)
         {
             var costumer = await _context.Costumer.FindAsync(id);
             return costumer;
@@ -40,47 +40,5 @@ namespace DAL.Data
             return changes > 0;
         }
 
-        //public async Task<bool> DeductAvailableHours(int hours, long Id)
-        //{
-        //    var donation = await _context.Donations.FindAsync(Id);
-        //    if (donation == null)
-        //    {
-        //        return false; 
-        //    }
-
-        //    donation.HoursAvailable -= hours;
-        //    if (donation.HoursAvailable <= 0)
-        //    {
-        //        return await DeleteDonation(Id);
-        //    }
-
-        //    int changes = await _context.SaveChangesAsync();
-        //    return changes > 0;
-        //}
-
-        //public async Task<bool> DeleteDonation(long donationId)
-        //{
-        //    var donation = await _context.Donations.FindAsync(donationId);
-        //    if (donation == null)
-        //    {
-        //        return false; 
-        //    }
-
-        //    _context.Donations.Remove(donation);
-        //    int changes = await _context.SaveChangesAsync();
-        //    return changes > 0;
-        //}
-
-        //public async Task<bool> RateDonation(long donationId, int rating)
-        //{
-        //    var donation = await _context.Donations.FindAsync(donationId);
-        //    if (donation == null)
-        //    {
-        //        return false; 
-        //    }
-        //    donation.Rating = rating;
-        //    int changes = await _context.SaveChangesAsync();
-        //    return changes > 0;
-        //}
     }
 }

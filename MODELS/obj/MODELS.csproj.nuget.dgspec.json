@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\1\\Documents\\תכנות\\project- .NetCore\\.NetProgect\\MODELS\\MODELS.csproj": {}
+    "C:\\Users\\1\\Documents\\תכנות\\project- .NetCore\\.NetProject\\MODELS\\MODELS.csproj": {}
   },
   "projects": {
-    "C:\\Users\\1\\Documents\\תכנות\\project- .NetCore\\.NetProgect\\MODELS\\MODELS.csproj": {
+    "C:\\Users\\1\\Documents\\תכנות\\project- .NetCore\\.NetProject\\MODELS\\MODELS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\1\\Documents\\תכנות\\project- .NetCore\\.NetProgect\\MODELS\\MODELS.csproj",
+        "projectUniqueName": "C:\\Users\\1\\Documents\\תכנות\\project- .NetCore\\.NetProject\\MODELS\\MODELS.csproj",
         "projectName": "MODELS",
-        "projectPath": "C:\\Users\\1\\Documents\\תכנות\\project- .NetCore\\.NetProgect\\MODELS\\MODELS.csproj",
+        "projectPath": "C:\\Users\\1\\Documents\\תכנות\\project- .NetCore\\.NetProject\\MODELS\\MODELS.csproj",
         "packagesPath": "C:\\Users\\1\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\1\\Documents\\תכנות\\project- .NetCore\\.NetProgect\\MODELS\\obj\\",
+        "outputPath": "C:\\Users\\1\\Documents\\תכנות\\project- .NetCore\\.NetProject\\MODELS\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -43,6 +43,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[6.0.31, )"
@@ -66,6 +70,10 @@
             "NUnit": {
               "target": "Package",
               "version": "[3.8.1, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.6.2, )"
             }
           },
           "imports": [

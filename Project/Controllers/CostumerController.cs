@@ -3,9 +3,11 @@ using BL.Interfaces;
 using DAL.DTO;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Project.Controllers
 {
+    //[Authorize]
     [ApiController]
     [Route("[controller]")]
     public class CostumerController : ControllerBase
@@ -27,7 +29,7 @@ namespace Project.Controllers
         }
 
         [HttpGet("GetCostumerById/{id}")]
-        public async Task<ActionResult<Costumer>> GetCostumerById(long id)
+        public async Task<ActionResult<Costumer>> GetCostumerById(int id)
         {
             var res = await _costumerService.GetCostumerById(id);
             if (res != null)
@@ -44,22 +46,5 @@ namespace Project.Controllers
             return BadRequest();
         }
 
-        //[HttpPost("AddHoursDonation/{hours}/{id}")]
-        //public async Task<ActionResult<bool>> AddHoursDonation(int hours, long id)
-        //{
-        //    var res = await _userService.AddHoursDonation(hours, id);
-        //    if (res)
-        //        return Ok(res);
-        //    return BadRequest();
-        //}
-
-        //[HttpPost("RemoveHoursAvailable/{hours}/{id}")]
-        //public async Task<ActionResult<bool>> RemoveHoursAvailable(int hours, long id)
-        //{
-        //    var res = await _userService.RemoveHoursAvailable(hours, id);
-        //    if (res)
-        //        return Ok(res);
-        //    return BadRequest();
-        //}
     }
 }

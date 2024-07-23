@@ -40,3 +40,17 @@ C:\Users\1\Documents\תכנות\project- .NetCore\.NetProgect\MODELS\obj\Debug\n
 C:\Users\1\Documents\תכנות\project- .NetCore\.NetProgect\MODELS\obj\Debug\net6.0\MODELS.pdb
 C:\Users\1\Documents\תכנות\project- .NetCore\.NetProgect\MODELS\obj\Debug\net6.0\MODELS.genruntimeconfig.cache
 C:\Users\1\Documents\תכנות\project- .NetCore\.NetProgect\MODELS\obj\Debug\net6.0\ref\MODELS.dll
+C:\Users\1\Documents\תכנות\project- .NetCore\.NetProject\MODELS\bin\Debug\net6.0\MODELS.deps.json
+C:\Users\1\Documents\תכנות\project- .NetCore\.NetProject\MODELS\bin\Debug\net6.0\MODELS.runtimeconfig.json
+C:\Users\1\Documents\תכנות\project- .NetCore\.NetProject\MODELS\bin\Debug\net6.0\MODELS.dll
+C:\Users\1\Documents\תכנות\project- .NetCore\.NetProject\MODELS\bin\Debug\net6.0\MODELS.pdb
+C:\Users\1\Documents\תכנות\project- .NetCore\.NetProject\MODELS\obj\Debug\net6.0\MODELS.csproj.AssemblyReference.cache
+C:\Users\1\Documents\תכנות\project- .NetCore\.NetProject\MODELS\obj\Debug\net6.0\MODELS.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\1\Documents\תכנות\project- .NetCore\.NetProject\MODELS\obj\Debug\net6.0\MODELS.AssemblyInfoInputs.cache
+C:\Users\1\Documents\תכנות\project- .NetCore\.NetProject\MODELS\obj\Debug\net6.0\MODELS.AssemblyInfo.cs
+C:\Users\1\Documents\תכנות\project- .NetCore\.NetProject\MODELS\obj\Debug\net6.0\MODELS.csproj.CoreCompileInputs.cache
+C:\Users\1\Documents\תכנות\project- .NetCore\.NetProject\MODELS\obj\Debug\net6.0\MODELS.dll
+C:\Users\1\Documents\תכנות\project- .NetCore\.NetProject\MODELS\obj\Debug\net6.0\refint\MODELS.dll
+C:\Users\1\Documents\תכנות\project- .NetCore\.NetProject\MODELS\obj\Debug\net6.0\MODELS.pdb
+C:\Users\1\Documents\תכנות\project- .NetCore\.NetProject\MODELS\obj\Debug\net6.0\MODELS.genruntimeconfig.cache
+C:\Users\1\Documents\תכנות\project- .NetCore\.NetProject\MODELS\obj\Debug\net6.0\ref\MODELS.dll

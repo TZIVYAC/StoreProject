@@ -1,12 +1,15 @@
 using AutoMapper;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.EntityFrameworkCore;
-using MODELS.Models;
 using System.Globalization;
 using BL.Interfaces;
 using BL.Services;
 using DAL.Data;
-using DAL.Profilies; 
+using DAL.Profilies;
+using MODELS.Models;
+using BL;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 namespace Project
 {
@@ -38,20 +41,18 @@ namespace Project
                 return config.CreateMapper();
             });
 
-            // הוספת DbContext
+            //  DbContext הוספת 
             builder.Services.AddControllersWithViews();
             builder.Services.AddDbContext<DBContext>(options =>
-                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultDataBase")));
+                options.UseSqlServer(builder.Configuration.GetConnectionString("ShopDB")));
 
             // הוספת UserData למיכל ההזרקות
             builder.Services.AddScoped<ProductData>();
             builder.Services.AddScoped<CostumerData>();
 
-
             // הוספת IUserService עם ההטמעה שלו UserService
             builder.Services.AddScoped<ICostumerService, CostumerService>();
             builder.Services.AddScoped<IProductService, ProductService>();
-
 
             var app = builder.Build();
 
@@ -62,10 +63,20 @@ namespace Project
                 app.UseSwaggerUI();
             }
 
+            app.UseMiddleware<JWTMiddleware>();
+            app.UseMiddleware<PrintFunctionNameMiddleware>();
+
+            //app.Run(async context =>
+            //{
+            //    context.Response.ContentType = "text/plain";
+            //    await context.Response.WriteAsync("ok");
+            //});
+
             app.UseHttpsRedirection();
             app.UseAuthorization();
             app.MapControllers();
             app.Run();
+   
         }
     }
 }

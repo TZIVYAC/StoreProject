@@ -37,35 +37,31 @@ namespace DAL.Data
 
         public async Task<bool> DeleteProduct(long productId)
         {
-            _context.Product.Remove(_mapper.Map<Product>(productId));
+
+            // Find the product by its Id
+            var product = _context.Product.Find(productId);
+
+            if (product != null)
+            {
+                // Remove the product from DbSet
+                _context.Product.Remove(product);
+                int changes = await _context.SaveChangesAsync();
+                return changes > 0;
+            }
+            else
+            {
+                // Handle case where product with given Id is not found
+                throw new ArgumentException("Product not found");
+            }
+        }
+
+
+        public async Task<bool> UpdatePrice(ProductDto product)
+        {
+            _context.Product.Update(_mapper.Map<Product>(product));
             int changes = await _context.SaveChangesAsync();
             return changes > 0;
         }
-
-        //public async Task<bool> AddHoursDonation(int hours, long id)
-        //{
-        //    var user = await _context.Users.FindAsync(id);
-        //    if (user == null)
-        //    {
-        //        return false;
-        //    }
-        //    user.HoursDonation += hours;
-        //    int changes = await _context.SaveChangesAsync();
-        //    return changes > 0;
-        //}
-        //public async Task<bool> RemoveHoursAvailable(int hours, long id)
-        //{
-        //    var user = await _context.Users.FindAsync(id);
-        //    if (user == null)
-        //    {
-        //        return false;
-        //    }
-        //    if((user.HoursAvailable - hours) < 0)
-        //        return false;
-        //    user.HoursAvailable -= hours;
-        //    int changes = await _context.SaveChangesAsync();
-        //    return changes > 0;
-        //}
 
     }
 }

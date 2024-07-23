@@ -11,9 +11,9 @@ namespace BL.Interfaces
     public interface IProductService
     {
         public Task<List<Product>> GetAllProducts();
-        public Task<bool> AddProduct(ProductDto donation);
-        //public Task<bool> DeductAvailableHours(int hours, long Id);
-        public Task<bool> DeleteProduct(long Id);
-        //public Task<bool> RateDonation(long Id, int rating);
+        public Task<bool> AddProduct(ProductDto product);
+        public Task<bool> DeleteProduct(long productId);
+        public Task<bool> UpdatePrice(ProductDto product);
+
     }
 }

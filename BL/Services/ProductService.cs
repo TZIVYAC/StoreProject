@@ -28,19 +28,15 @@ namespace BL.Services
             return await _productData.GetAllProducts();
         }
 
-        //public async Task<bool> DeductAvailableHours(int hours, long Id)
-        //{
-        //    return await _productData.DeductAvailableHours(hours,Id);
-        //}
-
         public async Task<bool> DeleteProduct(long productId)
         {
             return await _productData.DeleteProduct(productId);
         }
 
-        //public async Task<bool> RateDonation(long donationId, int rating)
-        //{
-        //    return await _donationData.RateDonation(donationId,rating);
-        //}
+        public async Task<bool> UpdatePrice(ProductDto product)
+        {
+            return await _productData.UpdatePrice(product);
+        }
+
     }
 }

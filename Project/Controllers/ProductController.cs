@@ -1,11 +1,13 @@
 ﻿using BL.Interfaces;
 using DAL.DTO;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace Project.Controllers
 {
+     //[Authorize]
     [ApiController]
     [Route("[controller]")]
     public class ProductController : Controller
@@ -35,15 +37,6 @@ namespace Project.Controllers
             return BadRequest();
         }
 
-        //[HttpPost("DeductAvailableHours")]
-        //public async Task<ActionResult<bool>> DeductAvailableHours([FromQuery] int hours, [FromQuery] long id)
-        //{
-        //    var res = await _donationService.DeductAvailableHours(hours, id);
-        //    if (res)
-        //        return Ok(res);
-        //    return BadRequest();
-        //}
-
         [HttpDelete("DeleteProduct")]
         public async Task<ActionResult<bool>> DeleteProduct([FromQuery] long productId)
         {
@@ -53,13 +46,14 @@ namespace Project.Controllers
             return BadRequest();
         }
 
-        //[HttpPost("RateDonation")]
-        //public async Task<ActionResult<bool>> RateDonation([FromQuery] long donationId, [FromQuery] int rating)
-        //{
-        //    var res = await _donationService.RateDonation(donationId, rating);
-        //    if (res)
-        //        return Ok(res);
-        //    return BadRequest();
-        //}
+        [HttpPut("UpdatePrice")]
+        public async Task<ActionResult<bool>> UpdatePrice([FromQuery] ProductDto p)
+        {
+            var res = await _productService.UpdatePrice(p);
+            if (res)
+                return Ok(res);
+            return BadRequest();
+        }
+
     }
 }
