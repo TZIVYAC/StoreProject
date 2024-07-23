@@ -23,11 +23,8 @@ namespace MODELS.Migrations
 
             modelBuilder.Entity("Project.Costumer", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Address")
                         .IsRequired()
@@ -40,6 +37,9 @@ namespace MODELS.Migrations
                     b.Property<string>("FirstName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("IdEntity")
+                        .HasColumnType("int");
 
                     b.Property<string>("LastName")
                         .IsRequired()

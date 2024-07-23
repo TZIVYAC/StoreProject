@@ -27,7 +27,7 @@ namespace DAL.Data
             return costumers;
         }
 
-        public async Task<Costumer> GetCostumerById(int id)
+        public async Task<Costumer> GetCostumerById(string id)
         {
             var costumer = await _context.Costumer.FindAsync(id);
             return costumer;

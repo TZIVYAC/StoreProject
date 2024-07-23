@@ -7,7 +7,6 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace Project.Controllers
 {
-    //[Authorize]
     [ApiController]
     [Route("[controller]")]
     public class CostumerController : ControllerBase
@@ -29,7 +28,7 @@ namespace Project.Controllers
         }
 
         [HttpGet("GetCostumerById/{id}")]
-        public async Task<ActionResult<Costumer>> GetCostumerById(int id)
+        public async Task<ActionResult<Costumer>> GetCostumerById(string id)
         {
             var res = await _costumerService.GetCostumerById(id);
             if (res != null)

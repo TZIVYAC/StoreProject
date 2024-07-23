@@ -30,7 +30,7 @@ namespace BL
             // Call the next delegate/middleware in the pipeline
             await _next(context);
 
-            // You can also log after the request is processed
+            // log after the request is processed
             Console.WriteLine($"Exiting function: {functionName}");
         }
 

@@ -37,24 +37,19 @@ namespace DAL.Data
 
         public async Task<bool> DeleteProduct(long productId)
         {
-
-            // Find the product by its Id
             var product = _context.Product.Find(productId);
 
             if (product != null)
             {
-                // Remove the product from DbSet
                 _context.Product.Remove(product);
                 int changes = await _context.SaveChangesAsync();
                 return changes > 0;
             }
             else
             {
-                // Handle case where product with given Id is not found
-                throw new ArgumentException("Product not found");
+                throw new ArgumentException("Product does not exist");
             }
         }
-
 
         public async Task<bool> UpdatePrice(ProductDto product)
         {

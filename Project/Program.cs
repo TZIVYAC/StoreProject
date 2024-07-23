@@ -10,6 +10,8 @@ using MODELS.Models;
 using BL;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.OpenApi.Models;
 
 namespace Project
 {
@@ -24,39 +26,98 @@ namespace Project
                 options.DefaultRequestCulture = new RequestCulture(CultureInfo.InvariantCulture);
             });
 
-            // הוספת שירותים למיכל ההזרקות
+            // adding services to the injection tank
             builder.Services.AddControllers();
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
-            // הוספת AutoMapper באופן ידני
+            // adding an autoMapper manually
             builder.Services.AddSingleton<IMapper>(provider =>
             {
                 var config = new MapperConfiguration(cfg =>
                 {
-                    // הוספת פרופילים כאן
+                    // adding profiles
                     cfg.AddProfile<CostumerProfile>();
                     cfg.AddProfile<ProductProfile>();
                 });
                 return config.CreateMapper();
             });
 
-            //  DbContext הוספת 
+            //  adding a DbContext
             builder.Services.AddControllersWithViews();
             builder.Services.AddDbContext<DBContext>(options =>
                 options.UseSqlServer(builder.Configuration.GetConnectionString("ShopDB")));
 
-            // הוספת UserData למיכל ההזרקות
+            // adding an UserData to the injection tank
             builder.Services.AddScoped<ProductData>();
             builder.Services.AddScoped<CostumerData>();
 
-            // הוספת IUserService עם ההטמעה שלו UserService
+            // adding an IUserService with an UserService
             builder.Services.AddScoped<ICostumerService, CostumerService>();
             builder.Services.AddScoped<IProductService, ProductService>();
 
+
+            var jwtIssuer = builder.Configuration["Jwt:Issuer"];
+            //var jwtKey = builder.Configuration["Jwt:Key"];
+            var jwtKey = Convert.ToBase64String(Guid.NewGuid().ToByteArray());
+
+            // checking the values
+            if (string.IsNullOrEmpty(jwtIssuer) || string.IsNullOrEmpty(jwtKey))
+            {
+                throw new ArgumentNullException("JWT settings are not configured properly.");
+            }
+
+            builder.Services.AddAuthentication(options =>
+            {
+                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            })
+            .AddJwtBearer(options =>
+            {
+                options.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuer = true,
+                    ValidateAudience = true,
+                    ValidateLifetime = true,
+                    ValidateIssuerSigningKey = true,
+                    ValidIssuer = jwtIssuer,
+                    ValidAudience = jwtIssuer,
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtKey)),
+                };
+            });
+
+            builder.Services.AddAuthorization();
+            //jwt for swagger
+            builder.Services.AddSwaggerGen(op =>
+            {
+                op.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+                {
+                    In = ParameterLocation.Header,
+                    Description = "Please enter token",
+                    Name = "Authorization",
+                    Type = SecuritySchemeType.Http,
+                    BearerFormat = "JWT",
+                    Scheme = "bearer"
+                });
+                op.AddSecurityRequirement(new OpenApiSecurityRequirement
+            {
+                {
+                    new OpenApiSecurityScheme
+                    {
+                        Reference=new OpenApiReference
+                        {
+                            Type=ReferenceType.SecurityScheme,
+                             Id="Bearer"
+                          }
+                    },
+                    new string[]{}
+                }
+            });
+            });
+
             var app = builder.Build();
 
-            // הגדרת הצנרת של בקשות HTTP
+            // configuring the http request pipeline
             if (app.Environment.IsDevelopment())
             {
                 app.UseSwagger();
@@ -65,12 +126,6 @@ namespace Project
 
             app.UseMiddleware<JWTMiddleware>();
             app.UseMiddleware<PrintFunctionNameMiddleware>();
-
-            //app.Run(async context =>
-            //{
-            //    context.Response.ContentType = "text/plain";
-            //    await context.Response.WriteAsync("ok");
-            //});
 
             app.UseHttpsRedirection();
             app.UseAuthorization();

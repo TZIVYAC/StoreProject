@@ -11,9 +11,8 @@ namespace BL.Interfaces
     public interface ICostumerService
     {
         public Task<List<Costumer>> GetAllCostumers();
-        public Task<Costumer> GetCostumerById(int id);
+        public Task<Costumer> GetCostumerById(string id);
         public Task<bool> AddCostumer(CostumerDto costumer);
-        //public Task<bool> AddHoursDonation(int hours, long id);
-        //public Task<bool> RemoveHoursAvailable(int hours, long id);
+
     }
 }

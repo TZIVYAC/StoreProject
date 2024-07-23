@@ -21,7 +21,7 @@ namespace BL.Services
         {
             return await _costumerData.GetAllCostumers();
         }
-        public async Task<Costumer> GetCostumerById(int id)
+        public async Task<Costumer> GetCostumerById(string id)
         {
             return await _costumerData.GetCostumerById(id);
         }

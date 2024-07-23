@@ -17,7 +17,7 @@ namespace MODELS.Models
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Server=DESKTOP-L1QQEC3\\SQLEXPRESS;Database=ShopDB;Trusted_Connection=True;MultipleActiveResultSets=True",
+                optionsBuilder.UseSqlServer("Server=DESKTOP-L1QQEC3\\SQLEXPRESS;Database=DB_Store;Trusted_Connection=True;MultipleActiveResultSets=True",
                     b => b.MigrationsAssembly("MODELS"));
             }
         }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Project.Controllers
 {
-     //[Authorize]
+    [Authorize]
     [ApiController]
     [Route("[controller]")]
     public class ProductController : Controller
